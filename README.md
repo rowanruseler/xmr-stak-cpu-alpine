@@ -4,12 +4,12 @@
 #### Table of Contents
 
 1. [Overview][Overview]
-2. [Description][Module description]
+2. [Description][Description]
 3. [Setup][Setup]
-    * [Environment variables][]
-    * [httpd][]
+    * Environment variables
+    * httpd
 4. [Usage][Usage]
-    * [Docker Compose][]
+    * Docker Compose
 
 ## Overview
 
@@ -42,34 +42,36 @@ docker run -dit --name my-running-miner -e WALLET_ADDRESS=45yZKa xmr-stak-cpu-al
 
 Following environment variables are optional:
 
-* POOL_ADDRESS          - Default: pool.supportxmr.com:333
-* POOL_PASSWORD         - Default: x
-* USE_NICEHASH          - Default: true
-* USE_TLS               - Default: false
-* TLS_FINGERPRINT       - Optional
-* POOL_WEIGHT           - Default: 1
-* CURRENCY              - Default: monero
-* CALL_TIMEOUT          - Default: 10
-* RETRY_TIME            - Default: 30
-* GIVEUP_LIMIT          - Default: 0
-* VERBOSE_LEVEL         - Default: 4
-* PRINT_MOTD            - Default: true
-* H_PRINT_TIME          - Default: 60
-* AES_OVERRIDE          - Default: null
-* USE_SLOW_MEMORY       - Default: warn
-* TLS_SECURE_ALGO       - Default: true
-* DAEMON_MODE           - Default: false
-* FLUSH_STDOUT          - Default: true
-* OUTPUT_FILE           - Optional
-* HTTPD_PORT            - Optional
-* HTTP_LOGIN            - Optional
-* HTTP_PASS             - Optional
-* PREFER_IPV4           - Default: true
-* CUSTOM_CPU            - Default: false
-* THREADS               - Default: 1
-* NO_PREFETCH           - Default: true
-* LOW_POWER_MODE        - Default: false
-* AFFINE_TO_CPU         - Default: true
+```
+POOL_ADDRESS          - Default: pool.supportxmr.com:333
+POOL_PASSWORD         - Default: x
+USE_NICEHASH          - Default: true
+USE_TLS               - Default: false
+TLS_FINGERPRINT       - Optional
+POOL_WEIGHT           - Default: 1
+CURRENCY              - Default: monero
+CALL_TIMEOUT          - Default: 10
+RETRY_TIME            - Default: 30
+GIVEUP_LIMIT          - Default: 0
+VERBOSE_LEVEL         - Default: 4
+PRINT_MOTD            - Default: true
+H_PRINT_TIME          - Default: 60
+AES_OVERRIDE          - Default: null
+USE_SLOW_MEMORY       - Default: warn
+TLS_SECURE_ALGO       - Default: true
+DAEMON_MODE           - Default: false
+FLUSH_STDOUT          - Default: true
+OUTPUT_FILE           - Optional
+HTTPD_PORT            - Optional
+HTTP_LOGIN            - Optional
+HTTP_PASS             - Optional
+PREFER_IPV4           - Default: true
+CUSTOM_CPU            - Default: false
+THREADS               - Default: 1
+NO_PREFETCH           - Default: true
+LOW_POWER_MODE        - Default: false
+AFFINE_TO_CPU         - Default: false
+```
 
 ### httpd
 
@@ -80,7 +82,11 @@ To enable the built-in web server:
 Then, run the commands to run the Docker image:
 
 ``` bash
-docker run -dit --name my-running-miner -e WALLET_ADDRESS=45yZKa -e HTTPD_PORT=8080 -p 8080:8080 xmr-stak-cpu-alpine
+docker run -dit --name my-running-miner \
+        -p 8080:8080 \
+        -e WALLET_ADDRESS=45yZKa \
+        -e HTTPD_PORT=8080 \
+        xmr-stak-cpu-alpine
 ```
 
 ## Usage
@@ -99,8 +105,6 @@ exec xmr-stak
 ```
 
 ### Docker Compose
-
-Example:
 
 ```
 xmr-stak-cpu-alpine:
