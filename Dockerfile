@@ -11,6 +11,8 @@ RUN apk --no-cache upgrade \
                 libmicrohttpd-dev \
         && git clone https://github.com/fireice-uk/xmr-stak.git \
         && cd xmr-stak \
+        && printf "#pragma once\nconstexpr double fDevDonationLevel = 0.0 / 100.0;" \
+                > ./xmrstak/donate-level.hpp \
         && cmake . \
                 -DCUDA_ENABLE=OFF \
                 -DOpenCL_ENABLE=OFF \
