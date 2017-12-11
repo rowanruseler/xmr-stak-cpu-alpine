@@ -19,7 +19,7 @@ XMR-Stak is a universal Stratum pool miner. This container is Alpine based and s
 
 This container is build and has been tested for:
 
-* [fireice-uk/xmr-stak/releases] v2.0.0
+* [fireice-uk/xmr-stak/releases] v2.1.0
 
 ## Description
 

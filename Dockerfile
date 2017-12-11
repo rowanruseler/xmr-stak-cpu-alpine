@@ -25,9 +25,6 @@ RUN apk --no-cache upgrade \
                 autoconf \
                 build-base
 
-VOLUME /mnt
-WORKDIR /mnt
-
 COPY ["run.sh", "setup.sh", "./"]
 
 RUN chmod +x run.sh
