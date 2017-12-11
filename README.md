@@ -1,6 +1,8 @@
 ###### based on [fireice-uk/xmr-stak]
 # XMR-Stak - CPU only - Alpine container
 
+Estimated container size >= 72MB
+
 #### Table of Contents
 
 1. [Overview][Overview]
