@@ -1,6 +1,7 @@
 #!/bin/sh
 # License: Unspecified
-# Version: 0.2
+# Version: 0.3
+set -e
 
 source ./setup.sh
 
