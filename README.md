@@ -45,7 +45,7 @@ docker run -dit --name my-running-miner -e WALLET_ADDRESS=45yZKa xmr-stak-cpu-al
 Following environment variables are optional:
 
 ```
-POOL_ADDRESS          - Default: pool.supportxmr.com:333
+POOL_ADDRESS          - Default: pool.supportxmr.com:3333
 POOL_PASSWORD         - Default: x
 USE_NICEHASH          - Default: true
 USE_TLS               - Default: false
