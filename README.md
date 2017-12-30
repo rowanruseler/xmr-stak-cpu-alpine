@@ -1,17 +1,17 @@
 ###### based on [fireice-uk/xmr-stak]
 # XMR-Stak - CPU only - Alpine container
 
-Estimated container size >= 72MB
+Estimated container size >= 73MB
 
 #### Table of Contents
 
 1. [Overview][Overview]
 2. [Description][Description]
 3. [Setup][Setup]
-    * Environment variables
-    * httpd
+    * [Environment variables][Environment variables]
+    * [httpd][httpd]
 4. [Usage][Usage]
-    * Docker Compose
+    * [Docker Compose][Docker Compose]
 
 ## Overview
 
@@ -21,7 +21,7 @@ XMR-Stak is a universal Stratum pool miner. This container is Alpine based and s
 
 This container is build and has been tested for:
 
-* [fireice-uk/xmr-stak/releases] v2.1.0
+* [fireice-uk/xmr-stak/releases] v2.2.0
 
 ## Description
 
@@ -122,7 +122,10 @@ xmr-stak-cpu-alpine:
 [Overview]: #overview
 [Description]: #description
 [Setup]: #setup
+[Environment variables]: #environment-variables
+[httpd]: #httpd
 [Usage]: #usage
+[Docker Compose]: #docker-compose
 
 [fireice-uk/xmr-stak]: https://github.com/fireice-uk/xmr-stak
 [fireice-uk/xmr-stak/releases]: https://github.com/fireice-uk/xmr-stak/releases
